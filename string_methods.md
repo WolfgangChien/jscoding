@@ -104,10 +104,10 @@ alert( data.toLowerCase() );  // hello!
 
 ## _charAt\(\)_ 傳回字串在指定位置的字元
 
-* 相當於"string".\[編號\]，但是 _charAt\(編號\)_ 比較**安全**
+* 相當於"string"\[編號\]，但是 _charAt\(編號\)_ 比較**安全**
 * 編號照例從零算起
-* "string".\[編號\] 的編號超過範圍時，會得到 undefined
-* _charAt\(編號\)_ 的編號超過範圍時，將傳回空字串
+* "string"\[編號\] 的編號超過範圍時，會得到 undefined
+* _charAt\(編號\)_ 的編號超過範圍時，傳回空字串
 
 ```
 var str = "錢達智";
