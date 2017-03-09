@@ -1,6 +1,3 @@
-
-
-
 # JavaScript 字串常用屬性與函式
 
 ## _length_ 字串字數
@@ -16,7 +13,7 @@ var dataLength = data.length;  // 傳回 3
 > ##### _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_length](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length\)\)
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_length](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_length%29\)
 
 ## _indexOf\(\)_ 搜尋特定文字
 
@@ -83,15 +80,15 @@ var result = str.slice(-6, -1); // 54321
 >
 > w3schools 線上練習網址:  
 > [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_slice](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_slice)
-
+>
 > ##### _**Exercise**_
 >
 > 請Google一下 _substring\(\)_ 的使用說明，該函式與 _slice\(\)_、_substr\(\)_ 有何異同?
-> 
+
 ## _toUpperCase\(\)_ _toLowerCase\(\)_ 字串內容轉大寫／小寫
 
-* "string"._toUpperCase\(\) 轉大寫
-* "string"._toLowerCase\(\) 轉大寫
+* "string"._toUpperCase\(\)_ 轉大寫
+* "string"._toLowerCase\(\)_ 轉大寫
 
 ```
 // code
@@ -103,12 +100,11 @@ alert( data.toLowerCase() );  // hello!
 > ##### _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower)
-
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_tolower](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_tolower)
 
 ## _charAt\(\)_ 傳回字串在指定位置的字元
 
-* 相當於"string".\[編號\]，_charAt\(編號\)_ 比較**安全**
+* 相當於"string".\[編號\]，但是 _charAt\(編號\)_ 比較**安全**
 * 編號照例從零算起
 * "string".\[編號\] 的編號超過範圍時，會得到 undefined
 * _charAt\(編號\)_ 的編號超過範圍時，將傳回空字串
@@ -125,11 +121,10 @@ var result = str[3];  // undefined
 alert(result.length); // 程式發生錯誤
 ```
 
-> ##### 
 > _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charat](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charat)
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_charat](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_charat)
 
 ## _charCodeAt\(\)_ 查出字串指定編號的字元內碼
 
@@ -148,7 +143,6 @@ var result = str.charCodeAt(0).toString(16)
 > ##### _**Exercise**_
 >
 > 請用 _charCodeAt\(\)_ 查出你的中文名字的 Unicode 編號
-> 
 
 ## _split\(\)_ 將字串拆解成陣列
 
@@ -165,7 +159,8 @@ console.log(JSON.stringify(dataArray));
 > ##### _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split)
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_split](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_split)
+>
 > ##### _**Exercise**_
 >
 > 請想想看，如何取出 c:\doc\faq.txt 的檔名?
@@ -175,11 +170,10 @@ console.log(JSON.stringify(dataArray));
 * source._replace\(找什麼，"換成什麼"\)_ 
 * 第一個參數 "找什麼" 若為字串，會以區分大小寫的方式，換掉找到的第一個項目
 * 第一個參數「找什麼」 若為 Regular Expression，則依格式處理，例如下列最後一列程式
-	* **i**：case-insensitive，不區分大寫小寫
-	* **g**：global match，不只換掉一個，全部更換
+  * **i**：case-insensitive，不區分大寫小寫
+  * **g**：global match，不只換掉一個，全部更換
 
 ```
-function myFunction() {
 var source = "abcABCabc";
 var result = source.replace("ABC", "$"); // abc$abc
 var result = source.replace(/abc/, "$"); // $ABCabc
@@ -189,9 +183,11 @@ var result = source.replace(/abc/ig, "$"); // $$$
 > ##### _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_replace](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_replace)
-
+> [https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref\_replace](https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_replace)
+>
 > ##### _**Exercise**_
 >
 > 如何將 "0123456789" 的 8 移到字串最左邊呢?
-> 
+
+
+
