@@ -1,3 +1,5 @@
 # Summary
 
-* [First Chapter](chapter1.md)
+* [Introduction](README.md)
+* [JavaScript字串常用屬性與函式](string_methods.md)
+
