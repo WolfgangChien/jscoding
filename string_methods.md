@@ -167,7 +167,7 @@ console.log(JSON.stringify(dataArray));
 
 ## _search\(\)_ 以 Regular Expression 語法搜尋文字
 
-* 與 indexOf() 相比，更有彈性(但也比較慢一些)。
+* 與 _indexOf\(\)_ 相比，更有彈性（但也比較慢一些）。
 * 下列程式的第一行，結尾處以 i 告知  JavaScript 引擎進行 case-insensitive 不區分大小寫文字比對。
 * 找不到時，傳回 -1
 
@@ -181,8 +181,8 @@ console.log(result);  // 24
 > ##### _**Exercise**_
 >
 > w3schools 線上練習網址:  
-> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_regexp](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_regexp)
-
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs\_string\_search\_regexp](https://www.w3schools.com/js/tryit.asp?filename=tryjs_string_search_regexp)
+>
 > ##### _**Note**_
 >
 > 關於 Regular Expression，請參考 Regular Expression 這章的說明。
