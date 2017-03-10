@@ -92,7 +92,6 @@ console.log(dateData.toUTCString());
 // ⇒ Thu, 01 Jan 1970 00:00:00 GMT
 console.log(dateData.getTime());
 // ⇒ 0
-
 ```
 
 請再看下列這一則例子：這回我們在建立 _Date_ 物件時，有指定時區。雖然傳入的是上午八點鐘的資料，但是後來抓到的時間戳記值仍然是零（而非 1000 \* 60 \* 60 \* 8），很明顯地，JavaScript  _Date_ 物件記住的是國際標準時間。
