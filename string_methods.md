@@ -173,7 +173,7 @@ console.log(JSON.stringify(dataArray));
 
 ```
 var format = /ci-15\d/i;
-var data = "Flight numbers: CI-123, CI-151, CI156."; 
+var data = "Flight numbers: CI-123, CI-151, CI-156."; 
 var result = data.search(format);
 console.log(result);  // 24
 ```

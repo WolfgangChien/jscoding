@@ -71,5 +71,81 @@ pattern 的屬性值可以這樣子處理:
 
 如果再學會「群組」，你的Regular Expression功力會更上一層。什麼是「群組」？簡單地說：用括號包起來的就算一組。
 
-（待續...）
+還是用例子來學比較有方向感，舉例來說，如何指e-mail的格式呢?
+1. e-mail 最好認的特徵就是 @，同時也是固定的內容，所以，先暫定成 \w+@\w+。也就是@符號前後一定都要有字。
+2. 有時候，在 @ 左邊可能會出現例如 wolfgnag.ta-chih.chien@gmail.com 含有句號、連字號的情形，但\w+並不接受句號、連字號，怎麼辦呢?
+3. 這樣子如何: **\w+(\[.-\]\w+)*@\w+(\[.-\]\w+)+**
 
+別急一段一段來， \[.-\]\w+ 用括號包起來，指定它們是一組，這組的格式是說，句號或連字號的後頭一定要有字（像 wolfgang-@gmail.com就不許）。( \[.-\]\w+) 這組又以＊修飾，說明了這組可能沒有，也可能重複好幾次（每次重複一定不能以句號、連字號結尾）。
+
+**\w+(\[.-\]\w+)*@\w+(\[.-\]\w+)+** 在 @ 右邊的情也類似，但是改用＋符號設定至少出現一次。
+
+## 其他重要符號
+
+| 符號 | 說明 |
+| :--- | :--- |
+| ｜ | 鍵盤 shift + \ 打出來的那個濾管符號，作用為:「或者」。例如郵遞區號為三或五碼的數字，格式為: \d{5}|\d{3} |
+| ＼ | 倒斜線 = 轉義符。例如，左括號在Regular Expression已用來指定群組，但我們現在希望特定位置是括號時，可利用 **\(** 來聲明那裏就是括號，不是群組。 |
+
+## JavaScript 與 Regular Expression
+JavaScript 使用下列格式指定Regular Expression:
+```
+  /pattern/modifiers
+```
+例如:
+```
+var format = /ci-15\d/i;
+var data = "Flight numbers: CI-123, CI-151, CI-156."; 
+var result = data.search(format);
+console.log(result);  // 24
+```
+上述程式的第一行，結尾處以 i 告知  JavaScript 引擎進行 case-insensitive 不區分大小寫文字比對。
+
+
+## _test\(\)_ 測試文字內容是否符合格式
+
+* _/RegularExpression/.test\("待驗內容"\)_ 檢查「待驗內容」是否符合RegularExpression格式。
+* 符合格式的話，_test\(\)_傳回 true，否則傳回 false
+
+```
+var format = /ci-15\d/i;
+var data = "Flight numbers: CI-123, CI-151, CI-156."; 
+var result = format.test(data);
+console.log(result);  // true
+```
+
+> ##### _**Exercise**_
+>
+> w3schools 線上練習網址:  
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_test](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_test)
+
+## _exec\(\)_ 以Regular Expression擷取文字
+
+* _/RegularExpression/.exec\("文字內容"\)_  依Regular Expression格式擷取「文字內容」。
+* 如果找到符合格式的文字，傳回找到的內容，否則傳回 null 
+
+```
+var format = /ci-15\d/i;
+var data = "Flight numbers: CI-123, CI-151, CI-156."; 
+var result = format.exec(data);
+console.log(result);  // CI-151
+
+```
+
+如果要繼續找「下一個」，請留意下列兩個重點:
+* /pattern/modifiers，modifiers 要加上 **g**，例如: /ci-15\d/ig
+* 連續呼叫 _exec\(\)_ 方法。第二回如果有找到的話就是找出第二個，第三回合找到的就是第三個，以下類推。例如:
+
+```
+var format = /CI-15\d/g;
+var data = "Flight numbers: CI-123, CI-151, CI-156.";
+alert(result.length);
+while ( ( result = format.exec(data) ) !== null ) {
+	alert(result);
+}
+```
+
+> ##### _**Exercise**_
+>
+> w3schools 線上練習網址:  
+> [https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_exec](https://www.w3schools.com/js/tryit.asp?filename=tryjs_regexp_exec)
