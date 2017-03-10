@@ -1,6 +1,6 @@
 # JavaScript 日期資料
 
-JavaScript 以 _Date_ 物件處理日期方面的資料（年、月、日、時、分、秒、毫秒）。你也可將日期視為是一種以 1970年元月一日零時零分零秒為基準點的毫秒差，例如 3000，即是1970年元月一日零時零分三秒。
+JavaScript 以 _Date_ 物件處理日期方面的資料（年、月、日、時、分、秒、毫秒）。我們也可將日期視為是一種以 1970年元月一日零時零分零秒為基準點的毫秒差，例如 3000，即是1970年元月一日零時零分三秒。
 
 建立 Date 物件時，有以下四種寫法:
 
@@ -92,13 +92,11 @@ console.log(dateData.getDay());  // 星期，星期天為０
 > ##### Exercise
 >
 > 請連往 w3schools.com 關於日期各項方法的說明頁並試用其方法，  
-> 網址: https://www.w3schools.com/js/js\_date\_methods.asp
-
+> 網址: [https://www.w3schools.com/js/js\_date\_methods.asp](https://www.w3schools.com/js/js_date_methods.asp)
+>
 > Exercise
 >
 > 如何將日期輸出成 yyyy-mm-dd 格式? 也就是將 2017/3/11 輸出成 2017-03-11
-
-
 
 ##### 
 
