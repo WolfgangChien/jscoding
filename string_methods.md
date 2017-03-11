@@ -88,7 +88,7 @@ var result = str.slice(-6, -1); // 54321
 ## _toUpperCase\(\)_ _toLowerCase\(\)_ 轉大寫／小寫
 
 * "string"._toUpperCase\(\)_ 轉大寫
-* "string"._toLowerCase\(\)_ 轉大寫
+* "string"._toLowerCase\(\)_ 轉小寫
 
 ```
 // code

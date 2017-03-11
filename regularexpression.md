@@ -143,12 +143,11 @@ console.log(result);  // CI-151
 如果要繼續找「下一個」，請留意下列兩個重點:
 
 * /pattern/modifiers，modifiers 要加上 **g**，例如: /ci-15\d/i**g**
-* 連續呼叫 _exec\(\)_ 方法。第二回合如果有找到的話就是找出第二個，第三回合找到的就是第三個，以下類推。例如:
+* 連續呼叫 _exec\(\)_ 方法。第二回合如果有找到的話就是第二個，第三回合找到的就是第三個，以下類推。例如:
 
 ```
 var format = /CI-15\d/g;
 var data = "Flight numbers: CI-123, CI-151, CI-156.";
-alert(result.length);
 while ( ( result = format.exec(data) ) !== null ) {
     alert(result);
 }
